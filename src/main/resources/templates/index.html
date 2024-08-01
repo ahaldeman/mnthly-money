@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head th:replace="~{fragments/header :: header}">
+    <title>HTMX App</title>
+</head>
+<body>
+<main class="container">
+    <h1>Monthly Money</h1>
+    <p>Spending Limit <span th:text="${spendingLimit}"/></p>
+</main>
+</body>
+</html>
