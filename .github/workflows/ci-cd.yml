@@ -40,7 +40,7 @@ jobs:
           password: ${{ secrets.DOCKER_HUB_ACCESS_TOKEN }}
 
       - name: Build Docker image with Gradle
-        run: ./gradlew bootBuildImage --imageName=${{ secrets.DOCKER_HUB_USERNAME }}/:${{ github.sha }}
+        run: ./gradlew bootBuildImage --imageName=${{ secrets.DOCKER_HUB_USERNAME }}/mnthly-money:${{ github.sha }}
 
       - name: Tag Docker image as latest
         run: docker tag ${{ secrets.DOCKER_HUB_USERNAME }}/mnthly-money:${{ github.sha }} ${{ secrets.DOCKER_HUB_USERNAME }}/mnthly-money:latest
